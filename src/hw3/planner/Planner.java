@@ -30,55 +30,23 @@ public class Planner {
             System.out.print("Please, input the day of the week: ");
             userChoice = scan.next();
 
-            switchChoice();
+            printTask();
 
         }
     }
 
-    public static void switchChoice() {
+    public static void printTask() {
 
-        switch (userChoice.trim().toLowerCase()) {
-            case "sunday":
-                System.out.println("Your tasks for Sunday:");
-                System.out.println(schedule[0][1]);
-                break;
+        String weekDay = userChoice.trim().toLowerCase();
 
-            case "monday":
-                System.out.println("Your tasks for Monday:");
-                System.out.println(schedule[1][1]);
-                break;
-
-            case "tuesday":
-                System.out.println("Your tasks for Tuesday:");
-                System.out.println(schedule[2][1]);
-                break;
-
-            case "wednesday":
-                System.out.println("Your tasks for Wednesday:");
-                System.out.println(schedule[3][1]);
-                break;
-
-            case "thursday":
-                System.out.println("Your tasks for Thursday:");
-                System.out.println(schedule[4][1]);
-                break;
-
-            case "friday":
-                System.out.println("Your tasks for Friday:");
-                System.out.println(schedule[5][1]);
-                break;
-
-            case "saturday":
-                System.out.println("Your tasks for Saturday:");
-                System.out.println(schedule[6][1]);
-                break;
-            case "exit":
-                System.out.println("Application is closing...");
-                break;
-
-            default:
-                System.out.println("Sorry, I don't understand you, please try again.");
+        for (int i = 0; i < schedule.length; i++) {
+            if(schedule[i][0].toLowerCase().equals(weekDay)) {
+                System.out.println("Your tasks for " + weekDay + ": ");
+                System.out.println(schedule[i][1]);
+            }
         }
+
+
 
     }
 }

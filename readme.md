@@ -38,7 +38,7 @@ scedule[1][1] = "go to courses; watch a film";
 
 
 
-Задание должно быть выполнено ипспользуя массивы (НЕ используйте интерфейсы List, Set, Map).
+Задание должно быть выполнено используя массивы (НЕ используйте интерфейсы List, Set, Map).
 Учтите: программа должна принимать команды как в нижнем регистре (monday) так и в верхнем (MONDAY) и учитывать, что пользователь мог случайно после дня недели ввести пробел.
 
 
@@ -65,3 +65,24 @@ https://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true
 https://metanit.com/java/tutorial/7.2.php
 Проверка, содержит ли строка подстроку
 https://www.tutorialspoint.com/java/lang/string_contains.htm
+-------------------------
+Критика ментора на мой хардкод:
+
+Но я бы рекомендовал меньше использовать хардкод. К примеру те-же дни недели у нас уже прописаны в массиве, и мы можем искать по ним планы на нужный день. В массиве у нас далеко не всегда будет все четко в том порядке что сейчас, сохранение порядка им доверять не нужно
+ если мы через будем искать задачи в массиве через день недели, то у нас сможет быть любое кол-во задач
+
+Критикуемый код:
+        schedule[0][0] = "Sunday";
+        schedule[0][1] = "do home work";
+        schedule[1][0] = "Monday";
+        schedule[1][1] = "go to courses; watch a film";
+        schedule[2][0] = "Tuesday";
+        schedule[2][1] = "Learn Java";
+        schedule[3][0] = "Wednesday";
+        schedule[3][1] = "Repeat JS";
+        schedule[4][0] = "Thursday";
+        schedule[4][1] = "Do coding in React";
+        schedule[5][0] = "Friday";
+        schedule[5][1] = "Switch Redux to MobX";
+        schedule[6][0] = "Saturday";
+        schedule[6][1] = "Classes at Dan-It";
